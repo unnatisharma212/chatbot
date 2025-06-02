@@ -1,0 +1,35 @@
+Career Development
+15. What training programs are available?
+Access courses on HCL TalentEdge, the internal LMS. Topics range from technical skills to leadership development.
+
+16. How are promotions handled?
+Promotions are based on performance, skills, and business needs. Discuss goals with your manager during quarterly reviews.
+
+17. Does HCL offer mentorship?
+Yes! Enroll in the Buddy Program (for new hires) or the Leadership Mentorship Initiative via HRMS.
+
+18. Can I transfer to another department/country?
+Internal job postings are listed on the HRMS portal. Discuss eligibility with HR and your manager.
+
+Technical Support
+19. How do I contact IT support?
+Log issues via the ServiceNow portal or call the IT helpline (local numbers on the intranet).
+
+20. How do I access company email remotely?
+Use Outlook Web Access or the HCL VPN. Contact IT for VPN setup guides.
+
+21. How to request software/hardware?
+Submit a ticket via ServiceNow. Approvals depend on your department’s budget and policies.
+
+22. Is VPN mandatory for remote work?
+Yes, for accessing sensitive systems. Always connect via HCL’s secure VPN.
+
+Company Tools & Platforms
+23. What tools are used for project management?
+Teams use Jira, ServiceNow, or Microsoft Project. Check with your project lead.
+
+24. How do I access the employee portal?
+Visit myhcl.in and log in with your credentials. Reset passwords via the Forgot Password link.
+
+25. Where can I report ethical concerns?
+Use the Ethics Hotline (available 24/7) or email ethics@hcl.com. All reports are confidential.
