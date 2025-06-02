@@ -1,5 +1,6 @@
 import streamlit as st
 from hcl_chatbot import HCLChatbot  # Import your chatbot class
+st.write("Loaded API key:", st.secrets.get("COHERE_API_KEY", "NOT FOUND"))
 
 # Fetch API key from Streamlit secrets
 api_key = st.secrets["COHERE_API_KEY"]
