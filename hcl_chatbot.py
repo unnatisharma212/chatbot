@@ -1,3 +1,4 @@
+import sentence_transformers
 import os
 import chromadb
 import cohere
