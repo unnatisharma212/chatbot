@@ -4,9 +4,6 @@ from hcl_chatbot import HCLChatbot  # Import your chatbot class
 # Set Streamlit page configuration FIRST
 st.set_page_config(page_title="HCL Internal Assistant", page_icon="🤖")
 
-# Debugging line to check API key
-st.write("Loaded API key:", st.secrets.get("COHERE_API_KEY", "NOT FOUND"))
-
 # Fetch API key from Streamlit secrets
 api_key = st.secrets["COHERE_API_KEY"]
 
@@ -60,7 +57,6 @@ if prompt := st.chat_input("What would you like to know?"):
 
             response = chatbot.generate_final_response(prompt, local_docs)
             st.markdown(response)
-        
         st.session_state.messages.append({"role": "assistant", "content": response})
 
 # --- Optional: Clear Chat Button ---
