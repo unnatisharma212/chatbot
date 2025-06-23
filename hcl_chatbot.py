@@ -1,3 +1,9 @@
+import sys
+import os
+os.environ["PYSQLITE3_BINARY"] = "1"
+import pysqlite3
+sys.modules["sqlite3"] = pysqlite3
+
 import sentence_transformers
 import os
 import chromadb
