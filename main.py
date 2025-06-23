@@ -4,6 +4,21 @@ from hcl_chatbot import HCLChatbot  # Import your chatbot class
 # Set Streamlit page configuration FIRST
 st.set_page_config(page_title="HCL Internal Assistant", page_icon="🤖")
 
+# --- Sidebar: Chat History ---
+with st.sidebar:
+    st.header("🕑 Chat History")
+    if "history" not in st.session_state:
+        st.session_state.history = []
+    if st.session_state.history:
+        for i, msg in enumerate(st.session_state.history):
+            st.markdown(f"**{msg['role'].capitalize()}:** {msg['content']}")
+            if i < len(st.session_state.history) - 1:
+                st.markdown("---")
+    else:
+        st.info("No chat history yet.")
+    if st.button("Clear History"):
+        st.session_state.history = []
+
 # Fetch API key from Streamlit secrets
 api_key = st.secrets["COHERE_API_KEY"]
 
@@ -44,6 +59,7 @@ for message in st.session_state.messages:
 # --- User Input and Chat Logic ---
 if prompt := st.chat_input("What would you like to know?"):
     st.session_state.messages.append({"role": "user", "content": prompt})
+    st.session_state.history.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
 
@@ -58,6 +74,7 @@ if prompt := st.chat_input("What would you like to know?"):
             response = chatbot.generate_final_response(prompt, local_docs)
             st.markdown(response)
         st.session_state.messages.append({"role": "assistant", "content": response})
+        st.session_state.history.append({"role": "assistant", "content": response})
 
 # --- Optional: Clear Chat Button ---
 if st.button("Clear Chat"):
