@@ -1,3 +1,9 @@
+try:
+    import pysqlite3
+    import sys
+    sys.modules["sqlite3"] = pysqlite3
+except ImportError:
+    pass
 import streamlit as st
 from hcl_chatbot import HCLChatbot  # Import your chatbot class
 
