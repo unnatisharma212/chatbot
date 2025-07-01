@@ -2,3 +2,4 @@ chromadb
 sentence_transformers
 streamlit
 cohere
+pysqlite3-binary
